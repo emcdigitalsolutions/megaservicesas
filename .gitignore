@@ -1,0 +1,17 @@
+# Documenti commerciali interni — NON pubblicare
+preventivo.html
+Preventivo-*.pdf
+*.tmp.pdf
+make-pdf.js
+info.txt
+
+# Anteprime / screenshot
+preview-*.png
+shot*.js
+slice-*.png
+shot-*.png
+
+# Sistema
+.DS_Store
+Thumbs.db
+node_modules/
