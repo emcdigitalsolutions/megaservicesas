@@ -5,11 +5,15 @@ Preventivo-*.pdf
 make-pdf.js
 info.txt
 
-# Anteprime / screenshot
+# Anteprime / screenshot (solo per il preventivo interno)
 preview-*.png
 shot*.js
+shots-*.js
+check-*.js
+check-*.png
 slice-*.png
 shot-*.png
+screenshots/
 
 # Sistema
 .DS_Store
