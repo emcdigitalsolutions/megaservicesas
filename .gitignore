@@ -19,3 +19,6 @@ screenshots/
 .DS_Store
 Thumbs.db
 node_modules/
+
+# Proposte logo (interne, non parte del sito pubblico)
+logo/
