@@ -24,6 +24,7 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<link rel="canonical" href="https://emcdigitalsolutions.github.io/megaservicesas/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -205,6 +206,28 @@ header.scrolled .burger span{background:var(--ink)}
 .loc .info .badge{display:inline-block;font-family:var(--f-head);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--verde-700);background:rgba(43,168,79,.1);padding:4px 11px;border-radius:6px;margin-bottom:10px}
 .loc .info h3{font-size:19px;margin-bottom:4px}
 .loc .info p{font-size:14.5px;color:var(--slate)}
+.map-wrap{position:relative;aspect-ratio:16/9;width:100%}
+.map-wrap .map{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto}
+.map-wrap .map-consent{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:20px;background:linear-gradient(135deg,var(--bg-2),var(--line-soft));color:var(--slate)}
+.map-wrap .map-consent svg{width:30px;height:30px;color:var(--blu-500);opacity:.8}
+.map-wrap .map-consent strong{font-family:var(--f-head);color:var(--ink);font-size:15.5px;font-weight:600}
+.map-wrap .map-consent p{font-size:13px;max-width:320px;color:var(--muted);margin:-2px 0 2px}
+.map-wrap.loaded .map-consent{display:none}
+.btn-mini{font-family:var(--f-head);font-weight:600;font-size:13px;color:#fff;background:var(--blu-700);border:none;border-radius:8px;padding:9px 16px;cursor:pointer;transition:background .2s}
+.btn-mini:hover{background:var(--blu-900)}
+/* Cookie banner */
+.cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:1200;max-width:680px;margin:0 auto;background:var(--white);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-l);padding:20px 22px;display:none;gap:16px;align-items:center;flex-wrap:wrap}
+.cookie-banner.show{display:flex;animation:ckUp .35s ease}
+@keyframes ckUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+.cookie-banner .txt{flex:1 1 320px;font-size:13.5px;color:var(--slate);line-height:1.55}
+.cookie-banner .txt strong{color:var(--ink)}
+.cookie-banner .txt a{color:var(--blu-700);font-weight:600}
+.cookie-banner .ck-btns{display:flex;gap:10px;flex-wrap:wrap}
+.cookie-banner button{font-family:var(--f-head);font-weight:600;font-size:13.5px;border-radius:9px;padding:10px 18px;cursor:pointer;border:1px solid var(--line)}
+.cookie-banner .ck-no{background:var(--white);color:var(--slate)}
+.cookie-banner .ck-no:hover{background:var(--bg-2)}
+.cookie-banner .ck-yes{background:var(--blu-700);color:#fff;border-color:var(--blu-700)}
+.cookie-banner .ck-yes:hover{background:var(--blu-900)}
 
 /* ============================================================ GALLERY */
 #galleria{background:var(--bg)}
@@ -553,7 +576,15 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
     <p style="font-size:15.5px;margin-bottom:8px" class="reveal">I nostri due punti vendita Rete Q8.</p>
     <div class="locs">
       <div class="loc reveal">
-        <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Via%20Luigi%20Giglia%20151%2C%20Campobello%20di%20Licata%20AG&output=embed" title="Mappa MegaService Campobello di Licata"></iframe>
+        <div class="map-wrap">
+          <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-src="https://www.google.com/maps?q=Via%20Luigi%20Giglia%20151%2C%20Campobello%20di%20Licata%20AG&output=embed" title="Mappa MegaService Campobello di Licata"></iframe>
+          <div class="map-consent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <strong>Mappa non caricata</strong>
+            <p>Per rispettare la tua privacy, non carichiamo Google Maps finché non acconsenti ai suoi cookie di terze parti. Clicca per visualizzare la mappa.</p>
+            <button class="btn-mini" data-load-maps>Mostra la mappa</button>
+          </div>
+        </div>
         <div class="info">
           <span class="badge">Sede storica</span>
           <h3>Campobello di Licata (AG)</h3>
@@ -561,7 +592,15 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
         </div>
       </div>
       <div class="loc reveal">
-        <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Enna&output=embed" title="Mappa Enna"></iframe>
+        <div class="map-wrap">
+          <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-src="https://www.google.com/maps?q=Enna&output=embed" title="Mappa Enna"></iframe>
+          <div class="map-consent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <strong>Mappa non caricata</strong>
+            <p>Per rispettare la tua privacy, non carichiamo Google Maps finché non acconsenti ai suoi cookie di terze parti. Clicca per visualizzare la mappa.</p>
+            <button class="btn-mini" data-load-maps>Mostra la mappa</button>
+          </div>
+        </div>
         <div class="info">
           <span class="badge">Dal 2021</span>
           <h3>Enna · Q8 Easy</h3>
@@ -696,7 +735,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
           Invia richiesta
         </button>
         <div class="form-note" id="formNote"></div>
-        <p class="privacy">Inviando accetti il trattamento dei dati secondo l'informativa privacy.</p>
+        <p class="privacy">Inviando accetti il trattamento dei dati secondo l'<a href="privacy.html" style="color:var(--blu-700);text-decoration:underline">informativa privacy</a>.</p>
       </form>
     </div>
   </div>
@@ -741,7 +780,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
       </div>
     </div>
     <div class="foot-bottom">
-      <div class="cp">© <span id="year"></span> MEGA SERVICE S.A.S. di Termini Michele &amp; C. · P.IVA 01989450844 · REA AG-140260 · Tutti i diritti riservati</div>
+      <div class="cp">© <span id="year"></span> MEGA SERVICE S.A.S. di Termini Michele &amp; C. · P.IVA 01989450844 · REA AG-140260 · Tutti i diritti riservati · <a href="privacy.html" style="color:inherit;text-decoration:underline">Privacy &amp; Cookie Policy</a></div>
       <a href="https://www.emcdigitalsolutions.it" target="_blank" rel="noopener" class="emc-credit">
         Progettato e Sviluppato da
         <svg width="58" height="17" viewBox="0 0 200 50">
@@ -759,6 +798,17 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
   </div>
 </footer>
 
+<!-- ============================== COOKIE BANNER ============================== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Informativa cookie">
+  <div class="txt">
+    Usiamo <strong>cookie tecnici</strong> necessari al funzionamento del sito. Con il tuo consenso carichiamo anche le <strong>mappe di Google</strong>, che possono installare cookie di terze parti. <a href="privacy.html">Cookie Policy</a>.
+  </div>
+  <div class="ck-btns">
+    <button class="ck-no" id="ckNo">Solo necessari</button>
+    <button class="ck-yes" id="ckYes">Accetta</button>
+  </div>
+</div>
+
 <!-- ============================== WA FLOAT ============================== -->
 <a href="https://wa.me/393451341860" class="wa-float" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2s-1.2.2-3.7-.8-4-3.6-4.2-3.8-1-1.4-1-2.6.6-1.8.9-2.1.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5-.3.4c-.1.1-.3.3-.1.6s.6 1 1.3 1.6c.9.8 1.6 1 1.9 1.2s.5.1.6-.1.7-.8.9-1.1.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.6-.1 1.1Z"/></svg>
@@ -767,6 +817,26 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
 <script>
 // year
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// cookie consent + caricamento mappe Google solo previo consenso
+(function(){
+  const KEY = 'mgs-cookie-consent';
+  const banner = document.getElementById('cookieBanner');
+  function loadMaps(){
+    document.querySelectorAll('.map-wrap').forEach(w => {
+      const f = w.querySelector('iframe[data-src]');
+      if (f && !f.src) f.src = f.getAttribute('data-src');
+      w.classList.add('loaded');
+    });
+  }
+  function choose(v){ try{ localStorage.setItem(KEY, v); }catch(e){} banner.classList.remove('show'); if (v === 'all') loadMaps(); }
+  let saved = null; try{ saved = localStorage.getItem(KEY); }catch(e){}
+  if (saved === 'all') loadMaps();
+  else if (saved !== 'necessary') banner.classList.add('show');
+  document.getElementById('ckYes').addEventListener('click', () => choose('all'));
+  document.getElementById('ckNo').addEventListener('click', () => choose('necessary'));
+  document.querySelectorAll('[data-load-maps]').forEach(b => b.addEventListener('click', () => choose('all')));
+})();
 
 // header scroll
 const header = document.getElementById('header');

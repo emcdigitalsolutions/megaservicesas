@@ -22,3 +22,10 @@ node_modules/
 
 # Proposte logo (interne, non parte del sito pubblico)
 logo/
+
+# Dominio: NON deployare finché megaservicesas.it non è registrato + DNS configurato (vedi README "Go-live dominio").
+# Quando pronto: togliere questa riga e fare commit del file CNAME.
+CNAME
+
+# File temporanei di lavorazione/render
+_tmp-*
