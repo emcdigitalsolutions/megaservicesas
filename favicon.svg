@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="MegaService">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#125a96"/><stop offset="1" stop-color="#06223b"/></linearGradient>
+    <linearGradient id="dp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2ba84f"/><stop offset="1" stop-color="#7fce95"/></linearGradient>
+  </defs>
+  <rect x="0" y="0" width="120" height="120" rx="26" fill="url(#bg)"/>
+  <path d="M32,90 V47 L60,75 L88,47 V90" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(60,45) scale(.42)"><path d="M0,46 C16,22 24,12 24,0 A24 24 0 1 0 -24,0 C-24,12 -16,22 0,46 Z" fill="url(#dp)"/></g>
+</svg>
