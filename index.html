@@ -241,7 +241,10 @@ header.scrolled .burger span{background:var(--ink)}
 .gallery .tile .lbl .ic{width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,.16);display:grid;place-items:center;margin-bottom:10px}
 .gallery .tile .lbl .ic svg{width:20px;height:20px}
 .gallery .tile .lbl strong{font-family:var(--f-head);font-size:16px;display:block}
-.gallery .tile .lbl span{font-size:12px;color:rgba(255,255,255,.65)}
+.gallery .tile .lbl span{font-size:12px;color:rgba(255,255,255,.8)}
+.gallery .tile.has-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.gallery .tile.has-img::before{display:none}
+.gallery .tile.has-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,17,32,.88),rgba(11,17,32,.1) 65%);z-index:0}
 .ph-note{margin-top:18px;font-size:13.5px;color:var(--muted);text-align:center}
 
 /* ============================================================ EVENTS */
@@ -419,9 +422,8 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
         </div>
       </div>
       <div class="hero-card">
-        <div class="photo">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V6a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16"/><path d="M3 22h13"/><path d="M14 9h2.5a1.5 1.5 0 0 1 1.5 1.5V18a2 2 0 0 0 2 2 2 2 0 0 0 2-2v-7l-3-3"/><path d="M6 8h5"/></svg></div>
-          <span class="ph-label">Stazione di servizio</span>
+        <div class="photo" style="background:linear-gradient(to top,rgba(11,17,32,.9),rgba(11,17,32,.2) 55%,rgba(11,17,32,.05)),url('images/station-hero.jpg') center/cover;background-color:var(--blu-900)">
+          <span class="ph-label">La nostra stazione Q8</span>
           <h3>Pieno, AdBlue<br>e via.</h3>
           <span class="q8">Partner Q8</span>
         </div>
@@ -546,7 +548,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
         </div>
       </div>
       <div class="adblue-visual reveal">
-        <div class="big-drop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <img src="images/adblue.jpg" alt="Taniche di AdBlue certificato e colonnina di erogazione Q8 AdBlue presso MegaService" style="width:100%;border-radius:16px;margin-bottom:24px;display:block;box-shadow:0 20px 50px rgba(43,168,79,.3)">
         <h3>Qualità garantita</h3>
         <p>Documenti di analisi e certificati disponibili su richiesta, per privati e flotte aziendali.</p>
         <span class="cert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><path d="M12 2 4 5v6c0 5 3.5 8 8 11 4.5-3 8-6 8-11V5l-8-3Z"/></svg> Standard motorizzazione tedesca</span>
@@ -635,14 +637,13 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
       <p>La stazione, gli impianti, i mezzi e le forniture: la nostra realtà in immagini.</p>
     </div>
     <div class="gallery">
-      <div class="tile reveal"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V6a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16"/><path d="M14 9h2.5a1.5 1.5 0 0 1 1.5 1.5V18a2 2 0 0 0 4 0v-7l-3-3"/></svg></div><strong>La stazione Q8</strong><span>Foto in arrivo</span></div></div>
-      <div class="tile reveal"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg></div><strong>L'impianto CarWash</strong><span>Foto in arrivo</span></div></div>
-      <div class="tile reveal"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3.5 4 6 7 6 10.2A6 6 0 1 1 6 12.2C6 9 8.5 6 12 2Z"/></svg></div><strong>Erogazione AdBlue</strong><span>Foto in arrivo</span></div></div>
-      <div class="tile reveal"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/><path d="M5 17H3V8l3-3h7l4 4h2a2 2 0 0 1 2 2v6h-2M9 17h6"/></svg></div><strong>Forniture camion</strong><span>Foto in arrivo</span></div></div>
-      <div class="tile reveal"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 7V5h4v2"/></svg></div><strong>Olio &amp; batterie</strong><span>Foto in arrivo</span></div></div>
-      <div class="tile reveal"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><strong>Il punto vendita di Enna</strong><span>Foto in arrivo</span></div></div>
+      <div class="tile has-img reveal"><img src="images/g-stazione.jpg" alt="Stazione di servizio Q8 MegaService con shop, vista serale" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V6a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16"/><path d="M14 9h2.5a1.5 1.5 0 0 1 1.5 1.5V18a2 2 0 0 0 4 0v-7l-3-3"/></svg></div><strong>La stazione Q8</strong><span>I nostri impianti</span></div></div>
+      <div class="tile has-img reveal"><img src="images/g-carwash.jpg" alt="Auto in lavaggio nell'impianto Easy Wash Q8 di MegaService" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg></div><strong>L'impianto CarWash</strong><span>Easy Wash Q8</span></div></div>
+      <div class="tile has-img reveal"><img src="images/g-adblue.jpg" alt="Taniche di AdBlue certificato disponibili presso MegaService" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3.5 4 6 7 6 10.2A6 6 0 1 1 6 12.2C6 9 8.5 6 12 2Z"/></svg></div><strong>AdBlue certificato</strong><span>Taniche e fusti</span></div></div>
+      <div class="tile has-img reveal"><img src="images/g-forniture.jpg" alt="Mezzi pesanti in rifornimento presso la stazione Q8 MegaService" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/><path d="M5 17H3V8l3-3h7l4 4h2a2 2 0 0 1 2 2v6h-2M9 17h6"/></svg></div><strong>Forniture mezzi pesanti</strong><span>Rete &amp; Extrarete</span></div></div>
+      <div class="tile has-img reveal"><img src="images/g-shop.jpg" alt="Shop MegaService con olio, AdBlue e accessori per auto e camion" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 7V5h4v2"/></svg></div><strong>Shop, olio &amp; accessori</strong><span>Prodotti per il tuo veicolo</span></div></div>
+      <div class="tile has-img reveal"><img src="images/g-enna.jpg" alt="Punto vendita Q8 Easy di MegaService a Enna" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><strong>Il punto vendita di Enna</strong><span>Q8 Easy</span></div></div>
     </div>
-    <p class="ph-note">Le immagini definitive verranno inserite con le foto fornite da MegaService.</p>
   </div>
 </section>
 
