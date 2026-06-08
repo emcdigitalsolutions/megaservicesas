@@ -861,6 +861,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
         <h4>Contatti</h4>
         <a href="tel:+393451341860">Michele · 345 134 1860</a>
         <a href="tel:+393333527382">Teresa La Marca · 333 352 7382</a>
+		<a href="tel:+393333527382">Giovanni · 333 352 7382</a>
         <a href="mailto:megaservicesas@libero.it">megaservicesas@libero.it</a>
         <a href="mailto:sasmegaservice@pec.it">PEC · sasmegaservice@pec.it</a>
         <p>Via Luigi Giglia 151 — 92023 Campobello di Licata (AG)</p>
@@ -960,12 +961,17 @@ const form = document.getElementById('contactForm');
 const note = document.getElementById('formNote');
 const submitBtn = form.querySelector('button[type="submit"]');
 const btnLabel = submitBtn.innerHTML;
+function showNote(type, text) {
+  note.className = 'form-note ' + type;
+  note.textContent = text;
+  note.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (form.querySelector('[name="_honey"]').value) return; // bot trap
   if (!form.checkValidity()) {
-    note.className = 'form-note err';
-    note.textContent = 'Compila i campi obbligatori per inviare la richiesta.';
+    form.reportValidity(); // evidenzia il campo mancante con il messaggio nativo del browser
+    showNote('err', 'Compila tutti i campi obbligatori per inviare la richiesta.');
     return;
   }
   submitBtn.disabled = true;
@@ -984,16 +990,13 @@ form.addEventListener('submit', (e) => {
       message: document.getElementById('msg').value
     })
   }).then(() => {
-    note.className = 'form-note ok';
-    note.textContent = 'Grazie! Abbiamo ricevuto il tuo messaggio, ti ricontatteremo al più presto.';
+    showNote('ok', 'Grazie! Abbiamo ricevuto il tuo messaggio, ti ricontatteremo al più presto.');
     form.reset();
   }).catch(() => {
-    note.className = 'form-note err';
-    note.textContent = 'Ops, qualcosa è andato storto. Riprova o scrivici su WhatsApp.';
+    showNote('err', 'Ops, qualcosa è andato storto. Riprova o scrivici su WhatsApp.');
   }).finally(() => {
     submitBtn.disabled = false;
     submitBtn.innerHTML = btnLabel;
-    note.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 });
 </script>
