@@ -130,7 +130,7 @@ header.scrolled .burger span{background:var(--ink)}
 
 /* ============================================================ TRUST STRIP */
 .trust{background:var(--white);border-bottom:1px solid var(--line-soft)}
-.trust .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
 .trust .t{padding:30px 24px;text-align:center;border-right:1px solid var(--line-soft)}
 .trust .t:last-child{border-right:none}
 .trust .t .ic{width:46px;height:46px;border-radius:12px;background:var(--bg-2);display:grid;place-items:center;margin:0 auto 12px;color:var(--blu-700)}
@@ -332,7 +332,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
   .cards,.events,.reviews,.gallery{grid-template-columns:repeat(2,1fr)}
   .foot-grid{grid-template-columns:1fr 1fr}
   .trust .grid{grid-template-columns:1fr 1fr}
-  .trust .t:nth-child(2){border-right:none}
+  .trust .t:nth-child(2n){border-right:none}
 }
 @media(max-width:720px){
   nav.main,.header-cta .btn-out{display:none}
@@ -467,7 +467,11 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
     <div class="grid">
       <div class="t reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V6a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16"/><path d="M14 9h2.5a1.5 1.5 0 0 1 1.5 1.5V18a2 2 0 0 0 4 0v-7l-3-3"/></svg></div>
-        <strong>Stazione di Servizio Q8</strong><span>Rete &amp; Extrarete</span>
+        <strong>Stazione di Servizio Q8</strong><span>Rete</span>
+      </div>
+      <div class="t reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="7.5" width="12.5" height="6.5" rx="3.25"/><path d="M5.5 7.5v6.5M9.5 7.5v6.5"/><path d="M14 14V9.5h2.4l3 3V14"/><path d="M8.1 16.5h7.3"/><circle cx="6.5" cy="16.5" r="1.7"/><circle cx="17" cy="16.5" r="1.7"/></svg></div>
+        <strong>Q8 Quaser</strong><span>Extrarete</span>
       </div>
       <div class="t reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3.5 4 6 7 6 10.2A6 6 0 1 1 6 12.2C6 9 8.5 6 12 2Z"/></svg></div>
