@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MegaService SAS · Stazione di servizio Q8, AdBlue e EasyWash — Campobello di Licata & Enna</title>
-<meta name="description" content="MegaService SAS: stazione di servizio Q8, AdBlue certificato (EcoGreen / GreenChem), EasyWash, olio, batterie e accessori auto e camion. Punti vendita a Campobello di Licata ed Enna. Forniture all'ingrosso per autotrasportatori.">
+<meta name="description" content="MegaService SAS: stazione di servizio Q8, AdBlue certificato (EcoGreen / GreenChem), EasyWash, olio, batterie e accessori auto e mezzi pesanti. Punti vendita a Campobello di Licata ed Enna. Forniture all'ingrosso per autotrasportatori.">
 <meta name="theme-color" content="#2e3c7e">
 <meta property="og:title" content="MegaService SAS · Q8, AdBlue & EasyWash">
 <meta property="og:description" content="Stazione di Servizio Q8, AdBlue certificato, EasyWash e forniture per autotrasportatori. Dal 1968. Campobello di Licata & Enna.">
@@ -298,6 +298,9 @@ header.scrolled .burger span{background:var(--ink)}
 .form-note{font-size:13px;margin-top:12px;padding:10px 14px;border-radius:10px;display:none}
 .form-note.ok{display:block;background:rgba(43,168,79,.12);color:var(--verde-700)}
 .form-note.err{display:block;background:rgba(199,97,62,.12);color:#a14c2e}
+#toast{position:fixed;left:50%;top:16px;transform:translate(-50%,-24px);max-width:92%;padding:15px 22px;border-radius:14px;font-size:15px;font-weight:600;color:#fff;text-align:center;box-shadow:0 14px 38px rgba(0,0,0,.28);z-index:9999;opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+#toast.ok{background:var(--verde-700)}#toast.err{background:#c0392b}
 
 /* ============================================================ FOOTER */
 footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
@@ -370,7 +373,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
   "@type": "AutomotiveBusiness",
   "name": "MegaService SAS",
   "legalName": "MEGA SERVICE S.A.S. DI TERMINI MICHELE & C.",
-  "description": "Stazione di servizio Q8, AdBlue certificato, EasyWash, olio, batterie e accessori per auto e camion. Agenzia Q8 Quaser (Rete ed Extrarete).",
+  "description": "Stazione di servizio Q8, AdBlue certificato, EasyWash, olio, batterie e accessori per auto e mezzi pesanti. Agenzia Q8 Quaser (Rete ed Extrarete).",
   "url": "https://emcdigitalsolutions.github.io/megaservicesas/",
   "telephone": "+39 345 134 1860",
   "email": "megaservicesas@libero.it",
@@ -435,7 +438,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
     <div class="hero-inner">
       <div class="hero-text">
         <span class="pill"><span class="dot"></span>Dal 1968</span>
-        <h1><span style="color:var(--blu-300)">Stazione di Servizio Q8</span>, <span style="color:var(--blu-300)">Agenzia Q8 Quaser</span>, <span class="g">AdBlue certificato</span> e EasyWash.</h1>
+        #<h1><span style="color:var(--blu-300)">Stazione di Servizio Q8</span>, <span style="color:var(--blu-300)">Agenzia Q8 Quaser</span>, <span class="g">AdBlue certificato</span> e EasyWash.</h1>
         <p class="lead">MegaService SAS è la tua stazione di servizio di fiducia: rifornimento Q8, AdBlue, EasyWash, olio, batterie e accessori. Due punti vendita a Campobello di Licata ed Enna, più forniture all'ingrosso per autotrasportatori.</p>
         <div class="cta-row">
           <a href="https://wa.me/393451341860" class="btn btn-wa" target="_blank" rel="noopener">
@@ -479,7 +482,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
       </div>
       <div class="t reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/><path d="M5 17H3V8l3-3h7l4 4h2a2 2 0 0 1 2 2v6h-2M9 17h6"/></svg></div>
-        <strong>Auto &amp; Camion</strong><span>Olio, batterie, accessori</span>
+        <strong>Auto &amp; Mezzi pesanti</strong><span>Olio, batterie, accessori</span>
       </div>
       <div class="t reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg></div>
@@ -523,19 +526,19 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Prodotti &amp; Servizi</span>
-      <h2>Tutto quello che serve alla tua auto e al tuo camion.</h2>
+      <h2>Tutto quello che serve alla tua auto ed ai tuoi mezzi pesanti.</h2>
       <p>Un unico punto di riferimento per il rifornimento, la pulizia e la manutenzione quotidiana del tuo veicolo.</p>
     </div>
     <div class="cards">
       <div class="card reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V6a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16"/><path d="M3 22h13"/><path d="M14 9h2.5a1.5 1.5 0 0 1 1.5 1.5V18a2 2 0 0 0 2 2 2 2 0 0 0 2-2v-7l-3-3"/><path d="M6 9h5"/></svg></div>
         <h3>Stazione di Servizio Q8</h3>
-        <p>Benzina, diesel e rifornimento di qualità con l'insegna Q8, per privati, flotte e autotrasportatori.</p>
+        <p>Benzina, gasolio e rifornimento di qualità con l'insegna Q8, per privati, flotte e autotrasportatori.</p>
       </div>
       <a href="hvo.html" class="card reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div>
         <h3>Q8 HVO</h3>
-        <p>Carburante diesel rinnovabile (HVO) di elevata qualità, compatibile con i moderni motori Diesel previa verifica.</p>
+        <p>Carburante gasolio rinnovabile (HVO) di elevata qualità, compatibile con i moderni motori gasolio previa verifica.</p>
         <span style="display:inline-block;margin-top:12px;color:var(--blu-700);font-weight:600;font-size:14px">Scopri di più →</span>
       </a>
       <div class="card reveal">
@@ -557,11 +560,11 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
       <div class="card reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 7V5h4v2M16 11v3M19 11v3M7 12h4"/></svg></div>
         <h3>Batterie</h3>
-        <p>Batterie per auto e camion, con consulenza sulla scelta del modello giusto per il tuo veicolo.</p>
+        <p>Batterie per auto e mezzi pesanti, con consulenza sulla scelta del modello giusto per il tuo veicolo.</p>
       </div>
       <div class="card reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
-        <h3>Accessori auto &amp; camion</h3>
+        <h3>Accessori auto &amp; mezzi pesanti</h3>
         <p>Una selezione di accessori e ricambi per la cura e l'equipaggiamento di automobili e mezzi pesanti.</p>
       </div>
       <div class="card reveal">
@@ -708,7 +711,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
       <a href="easywash.html" class="tile has-img reveal"><img src="images/g-carwash.jpg" alt="Auto in lavaggio nell'impianto Easy Wash Q8 di MegaService a Campobello di Licata" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg></div><strong>L'impianto EasyWash</strong><span>Campobello di Licata</span></div></a>
       <div class="tile has-img reveal"><img src="images/g-adblue.jpg" alt="Taniche di AdBlue certificato disponibili presso MegaService a Enna" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3.5 4 6 7 6 10.2A6 6 0 1 1 6 12.2C6 9 8.5 6 12 2Z"/></svg></div><strong>AdBlue certificato</strong><span>Enna</span></div></div>
       <div class="tile has-img reveal"><img src="images/g-forniture.jpg" alt="Mezzi pesanti in rifornimento presso la stazione Q8 MegaService di Campobello di Licata" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/><path d="M5 17H3V8l3-3h7l4 4h2a2 2 0 0 1 2 2v6h-2M9 17h6"/></svg></div><strong>Forniture mezzi pesanti</strong><span>Rete</span></div></div>
-      <div class="tile has-img reveal"><img src="images/g-shop.jpg" alt="Shop MegaService con olio, AdBlue e accessori per auto e camion a Enna" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 7V5h4v2"/></svg></div><strong>Shop, olio &amp; accessori</strong><span>Enna</span></div></div>
+      <div class="tile has-img reveal"><img src="images/g-shop.jpg" alt="Shop MegaService con olio, AdBlue e accessori per auto e mezzi pesanti a Enna" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 7V5h4v2"/></svg></div><strong>Shop, olio &amp; accessori</strong><span>Enna</span></div></div>
       <div class="tile has-img reveal"><img src="images/g-ricarica.jpg" alt="Colonnina di ricarica per veicoli elettrici presso MegaService a Enna" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="11" height="18" rx="2"/><path d="M4 21h11"/><path d="m10 7-2.5 4H10l-2 4"/><path d="M15 8h2.5a1.5 1.5 0 0 1 1.5 1.5V16a1.5 1.5 0 0 0 3 0v-6l-2.5-2.5"/></svg></div><strong>Ricarica elettrica</strong><span>Enna</span></div></div>
     </div>
   </div>
@@ -725,7 +728,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
     <div class="events">
       <div class="ev reveal">
         <div class="top"><img src="images/ev-carburante.jpg" alt="Pompe di rifornimento carburante Q8 presso MegaService" loading="lazy"></div>
-        <div class="body"><div class="date">Promozione</div><h3>Offerte sul carburante</h3><p>Spazio dedicato alle promozioni periodiche su benzina e diesel nei nostri punti vendita.</p></div>
+        <div class="body"><div class="date">Promozione</div><h3>Offerte sul carburante</h3><p>Spazio dedicato alle promozioni periodiche su benzina e gasolio nei nostri punti vendita.</p></div>
       </div>
       <div class="ev reveal">
         <div class="top"><img src="images/ev-adblue.jpg" alt="Erogatore di AdBlue e shop presso la stazione MegaService" loading="lazy"></div>
@@ -816,7 +819,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
         <div class="field"><label for="nome">Nome e cognome</label><input type="text" id="nome" name="nome" required placeholder="Il tuo nome"></div>
         <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" required placeholder="La tua email"></div>
-        <div class="field"><label for="tel">Telefono <span style="color:var(--muted);font-weight:400">(facoltativo)</span></label><input type="tel" id="tel" name="tel" placeholder="Il tuo numero"></div>
+        <div class="field"><label for="tel">Telefono <span style="color:var(--muted);font-weight:400">(facoltativo)</span></label><input type="tel" id="tel" name="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9+ ]*" maxlength="20" oninput="this.value=this.value.replace(/[^0-9+ ]/g,'')" placeholder="Il tuo numero"></div>
         <div class="field"><label for="msg">Messaggio</label><textarea id="msg" name="messaggio" required placeholder="Come possiamo aiutarti? (carburante, AdBlue, forniture, EasyWash...)"></textarea></div>
         <button type="submit" class="btn btn-primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
@@ -997,50 +1000,41 @@ document.querySelectorAll('.reveal').forEach((el,i) => {
   io.observe(el);
 });
 
-// contact form → Google Apps Script EMC (endpoint unico, routing site=megaservicesas)
-const CONTACT_API = 'https://script.google.com/macros/s/AKfycbxLCgN0-mHN86Dk37a5m-p2A3DgMjc8b__aCO_9oBA_amLUn5MlipebKalo5qNIoSWl/exec';
-const form = document.getElementById('contactForm');
-const note = document.getElementById('formNote');
-const submitBtn = form.querySelector('button[type="submit"]');
-const btnLabel = submitBtn.innerHTML;
-function showNote(type, text) {
-  note.className = 'form-note ' + type;
-  note.textContent = text;
-  note.scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  if (form.querySelector('[name="_honey"]').value) return; // bot trap
-  if (!form.checkValidity()) {
-    form.reportValidity(); // evidenzia il campo mancante con il messaggio nativo del browser
-    showNote('err', 'Compila tutti i campi obbligatori per inviare la richiesta.');
-    return;
+</script>
+<div id="toast" role="status" aria-live="polite"></div>
+<!-- Contact form: script ISOLATO e indipendente, cosi' nessun errore di altri
+     componenti puo' impedirne l'aggancio. Niente const/template-literal per
+     massima compatibilita' con browser/webview datati. -->
+<script>
+(function(){
+  function init(){
+    var form=document.getElementById('contactForm');
+    if(!form) return;
+    var note=document.getElementById('formNote');
+    var API='https://script.google.com/macros/s/AKfycbxLCgN0-mHN86Dk37a5m-p2A3DgMjc8b__aCO_9oBA_amLUn5MlipebKalo5qNIoSWl/exec';
+    var OK='Grazie! Abbiamo ricevuto il tuo messaggio, ti ricontatteremo al più presto.';
+    var ERR='Ops, qualcosa è andato storto. Riprova o scrivici su WhatsApp.';
+    var REQ='Compila tutti i campi obbligatori per inviare la richiesta.';
+    function val(id){var el=document.getElementById(id);return el?el.value:'';}
+    function showToast(msg,type){var t=document.getElementById('toast');if(!t)return;t.textContent=msg;t.className=type;setTimeout(function(){t.classList.add('show');},10);clearTimeout(t._t);t._t=setTimeout(function(){t.classList.remove('show');},6000);}
+    function showNote(type,msg){if(note){note.className='form-note '+type;note.textContent=msg;}showToast(msg,type);try{if(note)note.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){}}
+    var btn=form.querySelector('button[type="submit"]');
+    var btnLabel=btn?btn.innerHTML:'';
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var honey=form.querySelector('[name="_honey"]');
+      if(honey&&honey.value) return;
+      if(form.checkValidity && !form.checkValidity()){ if(form.reportValidity)form.reportValidity(); showNote('err',REQ); return; }
+      if(btn){btn.disabled=true;btn.textContent='Invio in corso...';}
+      if(note){note.className='form-note';note.textContent='';}
+      fetch(API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({site:'megaservicesas',name:val('nome'),email:val('email'),phone:val('tel'),message:val('msg')})})
+      .then(function(){showNote('ok',OK);form.reset();})
+      .catch(function(){showNote('err',ERR);})
+      .finally(function(){if(btn){btn.disabled=false;btn.innerHTML=btnLabel;}});
+    });
   }
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Invio in corso...';
-  note.className = 'form-note';
-  note.textContent = '';
-  fetch(CONTACT_API, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      site: 'megaservicesas',
-      name: document.getElementById('nome').value,
-      email: document.getElementById('email').value,
-      phone: document.getElementById('tel').value,
-      message: document.getElementById('msg').value
-    })
-  }).then(() => {
-    showNote('ok', 'Grazie! Abbiamo ricevuto il tuo messaggio, ti ricontatteremo al più presto.');
-    form.reset();
-  }).catch(() => {
-    showNote('err', 'Ops, qualcosa è andato storto. Riprova o scrivici su WhatsApp.');
-  }).finally(() => {
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = btnLabel;
-  });
-});
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
 </script>
 </body>
 </html>
