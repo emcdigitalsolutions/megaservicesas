@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://emcdigitalsolutions.github.io/megaservicesas/sitemap.xml
+Sitemap: https://megaservicesas.it/sitemap.xml
 
 # --- Crawler AI / answer engines (consentiti) ---
 User-agent: GPTBot
