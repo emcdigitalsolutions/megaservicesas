@@ -388,6 +388,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
 {
   "@context": "https://schema.org",
   "@type": "AutomotiveBusiness",
+  "@id": "https://megaservicesas.it/#organization",
   "name": "MegaService SAS",
   "legalName": "MEGA SERVICE S.A.S. DI TERMINI MICHELE & C.",
   "description": "Stazione di servizio Q8, AdBlue certificato, EasyWash, olio, batterie e accessori per auto e mezzi pesanti. Agenzia Q8 Quaser (Rete ed Extrarete).",
@@ -397,6 +398,15 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
   "vatID": "IT01989450844",
   "brand": "Q8",
   "areaServed": ["Campobello di Licata", "Enna", "Sicilia"],
+  "founder": {
+    "@type": "Person",
+    "@id": "https://megaservicesas.it/#michele-termini",
+    "name": "Michele Termini",
+    "jobTitle": "Titolare e Legale Rappresentante",
+    "worksFor": {"@id": "https://megaservicesas.it/#organization"},
+    "workLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressLocality": "Campobello di Licata", "addressRegion": "AG", "addressCountry": "IT"}}
+  },
+  "employee": {"@id": "https://megaservicesas.it/#michele-termini"},
   "department": [
     {
       "@type": "GasStation",
@@ -411,6 +421,25 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
       "geo": {"@type": "GeoCoordinates", "latitude": 37.5606151, "longitude": 14.2804509}
     }
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://megaservicesas.it/#michele-termini",
+  "name": "Michele Termini",
+  "jobTitle": "Titolare e Legale Rappresentante",
+  "worksFor": {
+    "@type": "AutomotiveBusiness",
+    "@id": "https://megaservicesas.it/#organization",
+    "name": "MegaService SAS",
+    "url": "https://megaservicesas.it/"
+  },
+  "homeLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressLocality": "Campobello di Licata", "addressRegion": "AG", "addressCountry": "IT"}},
+  "workLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressLocality": "Campobello di Licata", "addressRegion": "AG", "addressCountry": "IT"}},
+  "url": "https://megaservicesas.it/",
+  "telephone": "+39 345 134 1860"
 }
 </script>
 </head>
@@ -533,6 +562,10 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
       <div class="tl-item reveal">
         <div class="year">2021</div>
         <div class="body"><h3>Cresciamo: apre Enna</h3><p>Inauguriamo il secondo punto vendita a Enna, insegna Q8 Easy, portando il servizio MegaService anche oltre i confini della provincia di Agrigento.</p></div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="year">Oggi</div>
+        <div class="body"><h3>La guida di Michele Termini</h3><p>Oggi <strong>MegaService SAS</strong> è guidata da <strong>Michele Termini</strong>, titolare e legale rappresentante, con sede a <strong>Campobello di Licata (AG)</strong>: la stessa passione di famiglia, al servizio di automobilisti e autotrasportatori in tutta la Sicilia.</p></div>
       </div>
     </div>
   </div>
