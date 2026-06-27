@@ -110,32 +110,34 @@ header.scrolled nav.main a:hover{color:var(--blu-700);background:var(--bg-2)}
 header.scrolled .burger span{background:var(--ink)}
 
 /* ============================================================ HERO */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--grad-deep);color:#fff;overflow:hidden;padding:120px 0 80px}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--grad-deep);color:#fff;overflow:hidden;padding:92px 0 40px}
 .hero::before{content:"";position:absolute;inset:0;background:
   radial-gradient(circle at 78% 18%,rgba(43,168,79,.35),transparent 42%),
   radial-gradient(circle at 12% 88%,rgba(26,114,184,.40),transparent 45%)}
 .hero .roads{position:absolute;inset:0;opacity:.5;pointer-events:none}
-.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
-.hero .pill{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.10);border:1px solid rgba(127,206,149,.4);padding:8px 16px;border-radius:999px;font-size:13.5px;font-weight:500;color:var(--verde-300);margin-bottom:24px}
+.hero-inner{position:relative;z-index:2;text-align:center}
+.hero-text{max-width:920px;margin:0 auto}
+.hero .title-wrap{position:relative;display:inline-block;margin-bottom:6px}
+.hero .pill{position:absolute;right:-6px;bottom:2px;transform:translateY(50%);z-index:3;display:inline-flex;align-items:center;gap:8px;background:rgba(20,28,54,.78);backdrop-filter:blur(6px);border:1px solid rgba(127,206,149,.5);padding:7px 15px;border-radius:999px;font-size:13px;font-weight:600;color:var(--verde-300);box-shadow:0 10px 26px rgba(0,0,0,.30)}
 .hero .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--verde-300);box-shadow:0 0 12px var(--verde-300)}
-.hero h1{font-size:clamp(38px,5.6vw,64px);color:#fff;font-weight:700;margin-bottom:22px}
+.hero h1{font-size:clamp(28px,4vw,46px);color:#fff;font-weight:700;margin-bottom:14px}
 .hero h1 .g{background:linear-gradient(100deg,var(--verde-300),#bfe9cb);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.hero p.lead{font-size:19px;color:rgba(255,255,255,.84);max-width:540px;margin-bottom:34px}
-.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
-.hero .mini-stats{display:flex;gap:30px;flex-wrap:wrap}
-.hero .mini-stats .s .n{font-family:var(--f-head);font-size:30px;font-weight:700;color:#fff;line-height:1}
+.hero p.lead{font-size:16.5px;color:rgba(255,255,255,.84);max-width:640px;margin:22px auto 0;line-height:1.55}
+.hero .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 0;justify-content:center}
+.hero .mini-stats{display:flex;gap:36px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.hero .mini-stats .s .n{font-family:var(--f-head);font-size:25px;font-weight:700;color:#fff;line-height:1}
 .hero .mini-stats .s .l{font-size:13px;color:rgba(255,255,255,.7);margin-top:5px}
-/* hero visual card */
-.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--r-lg);padding:8px;backdrop-filter:blur(8px);box-shadow:var(--shadow-l)}
-.hero-card .photo{border-radius:18px;aspect-ratio:4/5;background:
-  linear-gradient(160deg,rgba(15,76,129,.5),rgba(31,138,63,.55)),
-  repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 14px,transparent 14px 28px);
-  display:flex;flex-direction:column;justify-content:flex-end;padding:26px;position:relative;overflow:hidden}
-.hero-card .photo .ic{position:absolute;top:24px;right:24px;width:54px;height:54px;border-radius:14px;background:rgba(255,255,255,.14);display:grid;place-items:center}
-.hero-card .photo .ic svg{width:28px;height:28px;color:#fff}
-.hero-card .photo .ph-label{font-size:12px;color:rgba(255,255,255,.6)}
-.hero-card .photo h3{color:#fff;font-size:23px;margin:4px 0 0}
-.hero-card .photo .q8{display:inline-block;margin-top:14px;background:#fff;color:var(--blu-700);font-family:var(--f-head);font-weight:700;font-size:13px;padding:6px 12px;border-radius:8px;letter-spacing:.04em}
+/* hero gallery (3 foto) */
+.hero-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;align-items:end}
+.hg-item{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/10;box-shadow:var(--shadow-l);border:1px solid rgba(255,255,255,.16);background:var(--blu-900)}
+.hg-item:nth-child(2){aspect-ratio:16/11.4;transform:translateY(-16px)}
+.hg-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.hg-item:hover img{transform:scale(1.07)}
+.hg-item::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,17,32,.86),rgba(11,17,32,.08) 62%);z-index:1}
+.hg-item figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:20px 22px;text-align:left}
+.hg-item .hg-loc{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-head);font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--verde-300);margin-bottom:6px}
+.hg-item .hg-loc svg{width:13px;height:13px}
+.hg-item .hg-cap{display:block;font-family:var(--f-head);font-weight:600;font-size:18px;color:#fff;line-height:1.22}
 .scroll-ind{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:rgba(255,255,255,.55);font-size:12px;letter-spacing:.16em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px}
 .scroll-ind .mouse{width:22px;height:34px;border:2px solid rgba(255,255,255,.4);border-radius:12px;position:relative}
 .scroll-ind .mouse::after{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);width:3px;height:6px;background:rgba(255,255,255,.7);border-radius:2px;animation:wheel 1.6s infinite}
@@ -201,8 +203,8 @@ header.scrolled .burger span{background:var(--ink)}
 /* ============================================================ RETE / EXTRARETE */
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .duo .panel{border-radius:var(--r-lg);padding:38px 34px;color:#fff;position:relative;overflow:hidden;min-height:280px;display:flex;flex-direction:column}
-.duo .rete{background:linear-gradient(150deg,var(--blu-700),var(--blu-500))}
-.duo .extra{background:linear-gradient(150deg,var(--verde-700),var(--verde-500))}
+.duo .rete{background:linear-gradient(155deg,rgba(56,81,163,.90),rgba(27,37,71,.86)),url('images/home-enna.jpg') center/cover}
+.duo .extra{background:linear-gradient(155deg,rgba(60,138,79,.90),rgba(27,37,71,.80)),url('images/extrarete-quaser.jpg') center 30%/cover}
 .duo .panel .tag{font-family:var(--f-head);font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.8);margin-bottom:10px}
 .duo .panel h3{color:#fff;font-size:26px;margin-bottom:12px}
 .duo .panel p{color:rgba(255,255,255,.9);font-size:15.5px;margin-bottom:18px}
@@ -360,6 +362,8 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
   nav.main.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:#fff;padding:14px;gap:2px;box-shadow:var(--shadow-m);border-top:1px solid var(--line)}
   nav.main.open a{color:var(--ink);padding:13px 16px}
   .section{padding:70px 0}
+  .hero-gallery{grid-template-columns:1fr;gap:14px;margin-top:34px}
+  .hg-item,.hg-item:nth-child(2){aspect-ratio:16/10;transform:none}
   .duo,.locs{grid-template-columns:1fr}
   .timeline::before{left:0}
   .tl-item{grid-template-columns:1fr;gap:6px}
@@ -375,7 +379,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"Quali carburanti e servizi offrite?","acceptedAnswer":{"@type":"Answer","text":"Eroghiamo benzina, gasolio e AdBlue certificato alla pompa e in confezione. Disponiamo inoltre di EasyWash, area self e di un'ampia gamma di lubrificanti e accessori per l'auto. Siamo agenzia Q8 Quaser."}},
+    {"@type":"Question","name":"Quali carburanti e servizi offrite?","acceptedAnswer":{"@type":"Answer","text":"Eroghiamo benzina, gasolio, gasolio agricolo e AdBlue certificato alla pompa e in confezione. Disponiamo inoltre di EasyWash, area self e di un'ampia gamma di lubrificanti e accessori per l'auto. Siamo agenzia Q8 Quaser."}},
     {"@type":"Question","name":"Dove si trovano le vostre stazioni di servizio?","acceptedAnswer":{"@type":"Answer","text":"Operiamo con punti vendita a Campobello di Licata e a Enna. Per indicazioni stradali e orari consulta la sezione Contatti."}},
     {"@type":"Question","name":"Cos'è l'AdBlue e perché è importante che sia certificato?","acceptedAnswer":{"@type":"Answer","text":"L'AdBlue è la soluzione di urea che abbatte le emissioni di ossidi di azoto nei motori diesel di nuova generazione. Forniamo solo prodotto conforme alla norma ISO 22241, garanzia di protezione per il sistema SCR del veicolo. È disponibile sia alla pompa sia in taniche."}},
     {"@type":"Question","name":"Fornite AdBlue e carburante anche ad aziende e autotrasportatori?","acceptedAnswer":{"@type":"Answer","text":"Sì. Gestiamo forniture dedicate per flotte aziendali, autotrasporto e attività con consumi continuativi, con condizioni riservate. Contattaci per un preventivo su misura."}},
@@ -483,27 +487,45 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
   <div class="wrap">
     <div class="hero-inner">
       <div class="hero-text">
-        <span class="pill"><span class="dot"></span>Dal 1968</span>
-        #<h1><span style="color:var(--blu-300)">Stazione di Servizio Q8</span>, <span style="color:var(--blu-300)">Agenzia Q8 Quaser</span>, <span class="g">AdBlue certificato</span> e EasyWash.</h1>
-        <p class="lead">MegaService SAS è la tua stazione di servizio di fiducia: rifornimento Q8, AdBlue, EasyWash, olio, batterie e accessori. Due punti vendita a Campobello di Licata ed Enna, più forniture all'ingrosso per autotrasportatori.</p>
-        <div class="cta-row">
-          <a href="https://wa.me/393451341860" class="btn btn-wa" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2s-1.2.2-3.7-.8-4-3.6-4.2-3.8-1-1.4-1-2.6.6-1.8.9-2.1.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5-.3.4c-.1.1-.3.3-.1.6s.6 1 1.3 1.6c.9.8 1.6 1 1.9 1.2s.5.1.6-.1.7-.8.9-1.1.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.6-.1 1.1Z"/></svg>
-            Scrivici su WhatsApp
-          </a>
-          <a href="#servizi" class="btn btn-ghost">Scopri i servizi</a>
-        </div>
-        <div class="mini-stats">
-          <div class="s"><div class="n">2</div><div class="l">Punti vendita Q8</div></div>
-          <div class="s"><div class="n">100%</div><div class="l">AdBlue certificato</div></div>
-        </div>
+        <span class="title-wrap">
+          <h1><span style="color:var(--blu-300)">Stazione di Servizio Q8</span>, <span style="color:var(--blu-300)">Agenzia Q8 Quaser</span>, <span class="g">AdBlue certificato</span> e EasyWash.</h1>
+          <span class="pill"><span class="dot"></span>Dal 1968</span>
+        </span>
       </div>
-      <div class="hero-card">
-        <div class="photo" style="background:linear-gradient(to top,rgba(11,17,32,.9),rgba(11,17,32,.2) 55%,rgba(11,17,32,.05)),url('images/station-hero.jpg') center/cover;background-color:var(--blu-900)">
-          <span class="ph-label">La nostra stazione Q8</span>
-          <h3>Pieno, AdBlue<br>e via.</h3>
-          <span class="q8">Partner Q8</span>
-        </div>
+      <div class="hero-gallery">
+        <figure class="hg-item">
+          <img src="images/home-campobello.jpg" alt="Stazione di servizio Q8 MegaService a Campobello di Licata in notturna" loading="eager">
+          <figcaption>
+            <span class="hg-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg> Campobello di Licata</span>
+            <span class="hg-cap">La sede storica Q8</span>
+          </figcaption>
+        </figure>
+        <figure class="hg-item">
+          <img src="images/home-enna.jpg" alt="Stazione di servizio Q8 Easy MegaService a Enna" loading="eager">
+          <figcaption>
+            <span class="hg-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg> Enna · Q8 Easy</span>
+            <span class="hg-cap">Il punto vendita di Enna</span>
+          </figcaption>
+        </figure>
+        <figure class="hg-item">
+          <img src="images/home-adblue.jpg" alt="AdBlue certificato GreenChem analizzato fornitura per fornitura presso MegaService" loading="eager">
+          <figcaption>
+            <span class="hg-loc"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c3.5 4 6 7 6 10.2A6 6 0 1 1 6 12.2C6 9 8.5 6 12 2Z"/></svg> AdBlue certificato</span>
+            <span class="hg-cap">Analizzato fornitura per fornitura</span>
+          </figcaption>
+        </figure>
+      </div>
+      <p class="lead">MegaService SAS è la tua stazione di servizio di fiducia: rifornimento Q8, AdBlue, EasyWash, olio, batterie e accessori. Due punti vendita a Campobello di Licata ed Enna, più forniture all'ingrosso per autotrasportatori.</p>
+      <div class="cta-row">
+        <a href="https://wa.me/393451341860" class="btn btn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2s-1.2.2-3.7-.8-4-3.6-4.2-3.8-1-1.4-1-2.6.6-1.8.9-2.1.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5-.3.4c-.1.1-.3.3-.1.6s.6 1 1.3 1.6c.9.8 1.6 1 1.9 1.2s.5.1.6-.1.7-.8.9-1.1.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.6-.1 1.1Z"/></svg>
+          Scrivici su WhatsApp
+        </a>
+        <a href="#servizi" class="btn btn-ghost">Scopri i servizi</a>
+      </div>
+      <div class="mini-stats">
+        <div class="s"><div class="n">2</div><div class="l">Punti vendita Q8</div></div>
+        <div class="s"><div class="n">100%</div><div class="l">AdBlue certificato</div></div>
       </div>
     </div>
   </div>
@@ -557,7 +579,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
       </div>
       <div class="tl-item reveal">
         <div class="year">2019</div>
-        <div class="body"><h3>Agenzia Q8 Quaser e AdBlue</h3><p>Diventiamo Agenzia Q8 Quaser (Rete ed Extrarete), con forniture all'ingrosso per gli autotrasportatori. Nello stesso anno avviamo la vendita di AdBlue, a fianco del carburante.</p></div>
+        <div class="body"><h3>Agenzia Q8 Quaser e AdBlue</h3><p>Diventiamo Agenzia Q8 Quaser, con forniture all'ingrosso per gli autotrasportatori. Nello stesso anno avviamo la vendita di AdBlue, a fianco del carburante.</p></div>
       </div>
       <div class="tl-item reveal">
         <div class="year">2021</div>
@@ -591,6 +613,11 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
         <p>Carburante gasolio rinnovabile (HVO) di elevata qualità, compatibile con i moderni motori gasolio previa verifica.</p>
         <span style="display:inline-block;margin-top:12px;color:var(--blu-700);font-weight:600;font-size:14px">Scopri di più →</span>
       </a>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17a2.5 2.5 0 1 0 5 0 2.5 2.5 0 0 0-5 0Z"/><circle cx="18.5" cy="17" r="1.8"/><path d="M9 17h7.7"/><path d="M6.5 14.5V9h4l2 4"/><path d="M12.5 13h4.3V8.5a1 1 0 0 0-1-1H13"/><path d="M6.5 9V6.5h3"/></svg></div>
+        <h3>Gasolio Agricolo</h3>
+        <p>Gasolio agricolo agevolato per trattori e mezzi agricoli, disponibile anche per le forniture Extrarete alle aziende del territorio.</p>
+      </div>
       <div class="card reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3.5 4 6 7 6 10.2A6 6 0 1 1 6 12.2C6 9 8.5 6 12 2Z"/><path d="M9.5 13a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
         <h3>AdBlue</h3>
@@ -649,7 +676,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
         </div>
       </div>
       <div class="adblue-visual reveal">
-        <img src="images/adblue.jpg" alt="Taniche di AdBlue certificato e colonnina di erogazione Q8 AdBlue presso MegaService" style="width:100%;border-radius:16px;margin-bottom:24px;display:block;box-shadow:0 20px 50px rgba(43,168,79,.3)">
+        <img src="images/adblue-section.jpg" alt="AdBlue certificato GreenChem analizzato fornitura per fornitura presso MegaService" style="width:100%;border-radius:16px;margin-bottom:24px;display:block;box-shadow:0 20px 50px rgba(43,168,79,.3)">
         <h3>Qualità garantita</h3>
         <p>Documenti di analisi e certificati disponibili su richiesta, per privati e flotte aziendali.</p>
         <span class="cert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><path d="M12 2 4 5v6c0 5 3.5 8 8 11 4.5-3 8-6 8-11V5l-8-3Z"/></svg> Standard motorizzazione tedesca</span>
@@ -688,6 +715,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
       <h2>Rete ed Extrarete: due modi di servirti.</h2>
       <p>Come Agenzia Q8 Quaser operiamo su due fronti: i punti vendita al pubblico e le forniture all'ingrosso per chi vive la strada ogni giorno.</p>
     </div>
+    <img src="images/Q8Quaser.jpg" alt="Q8 Quaser — Qualità e servizio per il rifornimento del tuo business" loading="lazy" class="reveal" style="width:100%;height:auto;border-radius:var(--r-lg);box-shadow:var(--shadow-m);margin:0 0 26px;display:block">
     <div class="duo">
       <div class="panel rete reveal">
         <span class="deco"></span>
@@ -703,9 +731,10 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
         <span class="deco"></span>
         <span class="tag">Extrarete</span>
         <h3>Agenzia Q8 Quaser</h3>
-        <p>Come Agenzia Q8 Quaser riforniamo all'ingrosso autotrasportatori e aziende, con condizioni pensate per chi macina chilometri.</p>
+        <p>Come Agenzia Q8 Quaser riforniamo all'ingrosso autotrasportatori e aziende, con condizioni pensate per chi macina chilometri. Forniamo gasolio anche per i mezzi agricoli del territorio.</p>
         <div class="pts">
-          <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/><path d="M5 17H3V8l3-3h7l4 4h2a2 2 0 0 1 2 2v6h-2M9 17h6"/></svg> Autotrasportatori &amp; flotte</div>
+          <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/><path d="M5 17H3V8l3-3h7l4 4h2a2 2 0 0 1 2 2v6h-2M9 17h6"/></svg> Gasolio per autotrasportatori &amp; flotte</div>
+          <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17a2.5 2.5 0 1 0 5 0 2.5 2.5 0 0 0-5 0Z"/><circle cx="18.5" cy="17" r="1.8"/><path d="M9 17h7.7"/><path d="M6.5 14.5V9h4l2 4"/><path d="M12.5 13h4.3V8.5a1 1 0 0 0-1-1H13"/><path d="M6.5 9V6.5h3"/></svg> Gasolio per mezzi agricoli</div>
           <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3.5 4 6 7 6 10.2A6 6 0 1 1 6 12.2C6 9 8.5 6 12 2Z"/></svg> AdBlue in taniche da 10 L e IBC da 1000 L</div>
         </div>
         <p style="font-size:14px;margin-top:14px"><strong>Michele Termini</strong> — Responsabile Quaser<br><a href="tel:+393451341860" style="color:var(--blu-700);font-weight:600">345 134 1860</a></p>
@@ -777,6 +806,10 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
       <div class="tile has-img reveal"><img src="images/g-forniture.jpg" alt="Mezzi pesanti in rifornimento presso la stazione Q8 MegaService di Campobello di Licata" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/><path d="M5 17H3V8l3-3h7l4 4h2a2 2 0 0 1 2 2v6h-2M9 17h6"/></svg></div><strong>Forniture mezzi pesanti</strong><span>Rete</span></div></div>
       <div class="tile has-img reveal"><img src="images/g-shop.jpg" alt="Shop MegaService con olio, AdBlue e accessori per auto e mezzi pesanti a Enna" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 7V5h4v2"/></svg></div><strong>Shop, olio &amp; accessori</strong><span>Enna</span></div></div>
       <div class="tile has-img reveal"><img src="images/g-ricarica.jpg" alt="Colonnina di ricarica per veicoli elettrici presso MegaService a Enna" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="11" height="18" rx="2"/><path d="M4 21h11"/><path d="m10 7-2.5 4H10l-2 4"/><path d="M15 8h2.5a1.5 1.5 0 0 1 1.5 1.5V16a1.5 1.5 0 0 0 3 0v-6l-2.5-2.5"/></svg></div><strong>Ricarica elettrica</strong><span>Enna</span></div></div>
+      <!-- PLACEHOLDER: immagine temporanea da sostituire con la foto reale dello SHOP DI CAMPOBELLO -->
+      <div class="tile has-img reveal"><img src="images/home-campobello.jpg" alt="Shop e punto vendita MegaService a Campobello di Licata" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 7V5h4v2"/></svg></div><strong>Lo shop di Campobello</strong><span>Campobello di Licata</span></div></div>
+      <!-- PLACEHOLDER: immagine temporanea da sostituire con la foto reale -->
+      <div class="tile has-img reveal"><img src="images/ev-carburante.jpg" alt="Area self service 24h con pompe di rifornimento Q8 presso MegaService" loading="lazy"><div class="lbl"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V6a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16"/><path d="M14 9h2.5a1.5 1.5 0 0 1 1.5 1.5V18a2 2 0 0 0 4 0v-7l-3-3"/></svg></div><strong>Area self 24h</strong><span>Self e servito</span></div></div>
     </div>
   </div>
 </section>
@@ -927,7 +960,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
     <div class="emcfaq-list reveal">
       <details class="emcfaq-item">
         <summary>Quali carburanti e servizi offrite?<span class="emcfaq-ic">+</span></summary>
-        <div class="emcfaq-body">Eroghiamo benzina, gasolio e <strong>AdBlue certificato</strong> alla pompa e in confezione. Disponiamo inoltre di EasyWash, area self e di un'ampia gamma di lubrificanti e accessori per l'auto. Siamo agenzia <strong>Q8 Quaser</strong>.</div>
+        <div class="emcfaq-body">Eroghiamo benzina, gasolio, <strong>gasolio agricolo</strong> e <strong>AdBlue certificato</strong> alla pompa e in confezione. Disponiamo inoltre di EasyWash, area self e di un'ampia gamma di lubrificanti e accessori per l'auto. Siamo agenzia <strong>Q8 Quaser</strong>.</div>
       </details>
       <details class="emcfaq-item">
         <summary>Dove si trovano le vostre stazioni di servizio?<span class="emcfaq-ic">+</span></summary>
