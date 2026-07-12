@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2S5V0LBNJT"></script>
+<!-- GA4: caricato SOLO dopo il consenso cookie (banner mgs-cookie-consent) -->
 <script>
+function mgsLoadGA(){
+  if (window._gaLoaded) return; window._gaLoaded = true;
+  var s = document.createElement('script'); s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2S5V0LBNJT';
+  document.head.appendChild(s);
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
   gtag('js', new Date());
-
   gtag('config', 'G-2S5V0LBNJT');
+}
+try{ if (localStorage.getItem('mgs-cookie-consent') === 'all') mgsLoadGA(); }catch(e){}
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1042,7 +1048,7 @@ footer{background:var(--blu-900);color:rgba(255,255,255,.7);padding:64px 0 28px}
 <!-- ============================== COOKIE BANNER ============================== -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Informativa cookie">
   <div class="txt">
-    Usiamo <strong>cookie tecnici</strong> necessari al funzionamento del sito. Con il tuo consenso carichiamo anche le <strong>mappe di Google</strong>, che possono installare cookie di terze parti. <a href="privacy.html">Cookie Policy</a>.
+    Usiamo <strong>cookie tecnici</strong> necessari al funzionamento del sito. Con il tuo consenso carichiamo anche le <strong>mappe di Google</strong> e le <strong>statistiche anonime di visita</strong> (Google Analytics), che possono installare cookie di terze parti. <a href="privacy.html">Cookie Policy</a>.
   </div>
   <div class="ck-btns">
     <button class="ck-no" id="ckNo">Solo necessari</button>
@@ -1070,7 +1076,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
       w.classList.add('loaded');
     });
   }
-  function choose(v){ try{ localStorage.setItem(KEY, v); }catch(e){} banner.classList.remove('show'); if (v === 'all') loadMaps(); }
+  function choose(v){ try{ localStorage.setItem(KEY, v); }catch(e){} banner.classList.remove('show'); if (v === 'all'){ loadMaps(); if (window.mgsLoadGA) mgsLoadGA(); } }
   let saved = null; try{ saved = localStorage.getItem(KEY); }catch(e){}
   if (saved === 'all') loadMaps();
   else if (saved !== 'necessary') banner.classList.add('show');

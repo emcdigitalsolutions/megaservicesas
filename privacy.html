@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2S5V0LBNJT"></script>
+<!-- GA4: caricato SOLO dopo il consenso cookie (banner mgs-cookie-consent) -->
 <script>
+function mgsLoadGA(){
+  if (window._gaLoaded) return; window._gaLoaded = true;
+  var s = document.createElement('script'); s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2S5V0LBNJT';
+  document.head.appendChild(s);
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
   gtag('js', new Date());
-
   gtag('config', 'G-2S5V0LBNJT');
+}
+try{ if (localStorage.getItem('mgs-cookie-consent') === 'all') mgsLoadGA(); }catch(e){}
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,13 +105,14 @@ footer .bar{display:flex;align-items:center;justify-content:space-between;gap:14
     <li><strong>Numero di telefono</strong> (facoltativo)</li>
     <li><strong>Contenuto del messaggio</strong> (obbligatorio)</li>
   </ul>
-  <p>Il sito <strong>non utilizza strumenti di profilazione</strong> e non raccoglie dati di navigazione a fini statistici o di marketing.</p>
+  <p>Previo consenso dell'utente, il sito raccoglie inoltre <strong>statistiche anonime di navigazione</strong> tramite Google Analytics 4 (vedi punto 7). Il sito <strong>non utilizza strumenti di profilazione</strong> né dati a fini di marketing.</p>
 
   <h2>3. Finalità e base giuridica</h2>
   <table>
     <tr><th>Finalità</th><th>Base giuridica</th></tr>
     <tr><td>Rispondere alle richieste di contatto, informazioni e preventivi</td><td>Esecuzione di misure precontrattuali e legittimo interesse (art. 6, lett. b e f, GDPR)</td></tr>
     <tr><td>Gestione dei cookie di terze parti (mappe)</td><td>Consenso dell'interessato (art. 6, lett. a, GDPR)</td></tr>
+    <tr><td>Statistiche di utilizzo del sito (Google Analytics 4)</td><td>Consenso dell'interessato (art. 6, lett. a, GDPR)</td></tr>
   </table>
 
   <h2>4. Modalità e tempi di conservazione</h2>
@@ -115,7 +122,7 @@ footer .bar{display:flex;align-items:center;justify-content:space-between;gap:14
   <p>I dati possono essere trattati, in qualità di responsabili o fornitori di servizi, da:</p>
   <ul>
     <li><strong>EMC Digital Solutions</strong> — gestione tecnica del sito e delle caselle di posta (responsabile del trattamento);</li>
-    <li><strong>Google Ireland Ltd.</strong> — invio del modulo di contatto (Google Apps Script) e visualizzazione delle mappe (Google Maps);</li>
+    <li><strong>Google Ireland Ltd.</strong> — invio del modulo di contatto (Google Apps Script), visualizzazione delle mappe (Google Maps) e statistiche di utilizzo (Google Analytics 4);</li>
     <li><strong>GitHub Inc.</strong> — hosting del sito (GitHub Pages).</li>
   </ul>
   <p>Alcuni di questi fornitori possono comportare il trasferimento di dati al di fuori dell'UE (es. USA), effettuato sulla base di <strong>garanzie adeguate</strong> (Clausole Contrattuali Standard e/o EU-US Data Privacy Framework). I dati non vengono ceduti a terzi per finalità commerciali.</p>
@@ -132,9 +139,12 @@ footer .bar{display:flex;align-items:center;justify-content:space-between;gap:14
   <h3>Cookie di terze parti (mappe)</h3>
   <p>Le mappe dei punti vendita sono fornite da <strong>Google Maps</strong>. Questo servizio può installare cookie di terze parti. Per questo motivo <strong>le mappe vengono caricate soltanto dopo il consenso dell'utente</strong>: fino a quel momento nessun cookie di Google viene impostato. Maggiori informazioni nella <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy di Google</a>.</p>
 
+  <h3>Cookie statistici (Google Analytics 4)</h3>
+  <p>Per capire come viene utilizzato il sito (pagine visitate, provenienza dei visitatori, dispositivo) usiamo <strong>Google Analytics 4</strong>, un servizio di Google Ireland Ltd. che utilizza cookie e identificatori propri. Anche questi cookie vengono attivati <strong>soltanto dopo il consenso dell'utente</strong> tramite il banner: chi sceglie "Solo necessari" non viene tracciato in alcun modo. I dati raccolti sono statistiche aggregate sull'uso del sito e non vengono usati per pubblicità o profilazione. Maggiori informazioni nella <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy di Google</a>.</p>
+
   <h3>Come gestire i cookie</h3>
-  <p>Alla prima visita compare un banner con cui è possibile <strong>accettare</strong> o <strong>rifiutare</strong> i cookie di terze parti. La scelta può essere modificata in qualsiasi momento cancellando i dati del sito dal browser. È inoltre possibile gestire o disabilitare i cookie dalle impostazioni del proprio browser.</p>
-  <p>Il sito <strong>non utilizza cookie analitici, di profilazione o di marketing</strong>.</p>
+  <p>Alla prima visita compare un banner con cui è possibile <strong>accettare</strong> o <strong>rifiutare</strong> i cookie di terze parti (mappe e statistiche). La scelta può essere modificata in qualsiasi momento cancellando i dati del sito dal browser. È inoltre possibile gestire o disabilitare i cookie dalle impostazioni del proprio browser.</p>
+  <p>Il sito <strong>non utilizza cookie di profilazione o di marketing</strong>.</p>
 
   <h2>8. Modifiche all'informativa</h2>
   <p>Il Titolare si riserva di aggiornare la presente informativa. Le modifiche saranno pubblicate su questa pagina con l'indicazione della data di ultimo aggiornamento.</p>
