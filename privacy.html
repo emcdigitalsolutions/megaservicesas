@@ -153,5 +153,20 @@ footer .bar{display:flex;align-items:center;justify-content:space-between;gap:14
   </div>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+/* "Torna al sito": se si arriva dalla home, history.back() ripristina la posizione esatta;
+   altrimenti (accesso diretto/esterno) vale il normale href di fallback */
+(function(){
+  var b=document.querySelector('a.back');
+  if(!b)return;
+  b.addEventListener('click',function(e){
+    try{
+      if(history.length>1&&document.referrer&&new URL(document.referrer).origin===location.origin){
+        e.preventDefault();history.back();
+      }
+    }catch(err){}
+  });
+})();
+</script>
 </body>
 </html>
